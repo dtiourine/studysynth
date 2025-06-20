@@ -1,15 +1,19 @@
 from pydantic_settings import BaseSettings
 from functools import lru_cache
+from typing import List
+from pathlib import Path
 
 
 class AuthConfig(BaseSettings):
-    AUTH0_DOMAIN: str
-    AUTH0_API_AUDIENCE: str
-    AUTH0_ISSUER: str
-    AUTH0_ALGORITHMS: str
+    auth0_domain: str
+    auth0_api_audience: str
+    auth0_issuer: str
+    auth0_algorithms: str
 
     class Config:
-        env_file = ".env"
+        env_file = Path(__file__).parent.parent.parent / ".env"
+        env_file_encoding = 'utf-8'
+        extra = 'ignore'
 
 
 @lru_cache()
