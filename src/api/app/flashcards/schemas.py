@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
 
 
@@ -22,6 +22,8 @@ class FlashcardResponse(BaseModel):
 
 class FlashcardDeckCreate(BaseModel):
     title: str = Field(..., min_length=1, max_length=255)
+    flashcards: List[FlashcardCreate] = Field(..., min_items=1, max_items=50)
+
     description: Optional[str] = Field(None, max_length=1000)
 
 
