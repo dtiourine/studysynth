@@ -1,8 +1,8 @@
-from api.app.llm.client.abstract import AbstractLLMClient
+from src.api.app.llm.client.abstract import AbstractLLMClient
 from anthropic import AsyncAnthropic
 
-from api.app.llm.exceptions import LLMGenerationError
-from api.app.llm.schemas import LLMRequest, LLMResponse
+from src.api.app.llm.exceptions import LLMGenerationError
+from src.api.app.llm.schemas import LLMRequest, LLMResponse
 
 
 class AnthropicLLMClient(AbstractLLMClient):

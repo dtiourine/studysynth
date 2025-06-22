@@ -1,9 +1,9 @@
 from typing import Dict, Type
 
-from api.app.llm.client.abstract import AbstractLLMClient
-from api.app.llm.client.anthropic import AnthropicLLMClient
-from api.app.llm.client.openai import OpenAILLMClient
-from api.app.llm.exceptions import LLMConfigurationError
+from src.api.app.llm.client.abstract import AbstractLLMClient
+from src.api.app.llm.client.anthropic import AnthropicLLMClient
+from src.api.app.llm.client.openai import OpenAILLMClient
+from src.api.app.llm.exceptions import LLMConfigurationError
 
 LLM_PROVIDERS: Dict[str, Type[AbstractLLMClient]] = {
     "anthropic": AnthropicLLMClient,

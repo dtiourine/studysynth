@@ -1,11 +1,11 @@
 from functools import lru_cache
 from fastapi import Depends
 
-from api.app.llm.client.abstract import AbstractLLMClient
-from api.app.llm.client.factory import get_available_providers, create_llm_client
-from api.app.llm.config import llm_settings
-from api.app.llm.exceptions import LLMConfigurationError
-from api.app.llm.service import LLMService
+from src.api.app.llm.client.abstract import AbstractLLMClient
+from src.api.app.llm.client.factory import get_available_providers, create_llm_client
+from src.api.app.llm.config import llm_settings
+from src.api.app.llm.exceptions import LLMConfigurationError
+from src.api.app.llm.service import LLMService
 
 
 @lru_cache()

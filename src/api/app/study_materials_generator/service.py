@@ -2,13 +2,13 @@ import json
 
 from pydantic import ValidationError
 
-from api.app.flashcards.schemas import FlashcardCreate
-from api.app.llm.exceptions import LLMGenerationError
-from api.app.llm.schemas import LLMRequest
-from api.app.llm.service import LLMService
-from api.app.quizzes.schemas import QuizCreate
-from api.app.study_materials_generator.constants import QUIZ_GENERATION_PROMPT, FLASHCARD_GENERATION_PROMPT
-from api.app.study_materials_generator.schemas import StudyContent
+from src.api.app.flashcards.schemas import FlashcardCreate
+from src.api.app.llm.exceptions import LLMGenerationError
+from src.api.app.llm.schemas import LLMRequest
+from src.api.app.llm.service import LLMService
+from src.api.app.quizzes.schemas import QuizCreate
+from src.api.app.study_materials_generator.constants import QUIZ_GENERATION_PROMPT, FLASHCARD_GENERATION_PROMPT
+from src.api.app.study_materials_generator.schemas import StudyContent
 
 
 class StudyMaterialsGenerator:

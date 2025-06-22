@@ -3,8 +3,8 @@ from typing import List
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, and_, func
 from sqlalchemy.orm import selectinload
-from api.app.quizzes.models import Quiz, MultipleChoiceQuestion, AnswerChoices
-from api.app.quizzes.schemas import QuizCreate
+from src.api.app.quizzes.models import Quiz, MultipleChoiceQuestion, AnswerChoices
+from src.api.app.quizzes.schemas import QuizCreate
 
 
 class QuizService:

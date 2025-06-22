@@ -1,7 +1,7 @@
 import openai
-from api.app.llm.client.abstract import AbstractLLMClient
-from api.app.llm.exceptions import LLMGenerationError
-from api.app.llm.schemas import LLMRequest, LLMResponse
+from src.api.app.llm.client.abstract import AbstractLLMClient
+from src.api.app.llm.exceptions import LLMGenerationError
+from src.api.app.llm.schemas import LLMRequest, LLMResponse
 
 
 class OpenAILLMClient(AbstractLLMClient):

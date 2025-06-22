@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from api.app.llm.schemas import LLMRequest, LLMResponse
+from src.api.app.llm.schemas import LLMRequest, LLMResponse
 
 
 class AbstractLLMClient(ABC):
