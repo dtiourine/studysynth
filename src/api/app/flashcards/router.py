@@ -7,7 +7,7 @@ router = APIRouter(prefix="/flashcards", tags=["Flashcards"])
 @router.post("/decks", response_model=FlashcardDeckResponse)
 async def create_deck(
         deck_data: FlashcardDeckCreate,
-        current_user: USer = Depends(get_current_user),
+        # current_user: User = Depends(get_current_user),
         db: AsyncSession = Depends(get_db)
 ):
     """Create a new flashcard deck"""

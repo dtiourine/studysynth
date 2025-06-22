@@ -2,6 +2,7 @@ from fastapi import Depends, FastAPI, Security
 from fastapi.security import HTTPBearer
 
 from src.api.app.auth.service import VerifyToken
+from src.api.app.database import Base, engine
 from src.api.app.quizzes.router import router as quizzes_router
 
 token_auth_scheme = HTTPBearer()
@@ -10,6 +11,12 @@ app = FastAPI()
 auth = VerifyToken()
 
 app.include_router(quizzes_router)
+
+
+@app.on_event("startup")
+async def create_tables():
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 
 @app.get('/api/public')

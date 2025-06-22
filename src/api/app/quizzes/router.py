@@ -10,7 +10,7 @@ from src.api.app.quizzes.service import QuizService
 from src.api.app.study_materials_generator.dependencies import get_study_materials_generator
 from src.api.app.study_materials_generator.schemas import StudyContent
 from src.api.app.study_materials_generator.service import StudyMaterialsGenerator
-from src.api.app.auth.dependencies import get_current_user
+# from src.api.app.auth.dependencies import get_current_user
 
 import logging
 

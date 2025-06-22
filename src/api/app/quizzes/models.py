@@ -1,12 +1,9 @@
 from sqlalchemy import Column, String, Integer, Text, ForeignKey, DateTime, Enum as SQLEnum
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import DeclarativeBase, relationship
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from enum import Enum
 
-
-class Base(DeclarativeBase):
-    pass
+from src.api.app.database import Base
 
 
 class AnswerChoices(Enum):
