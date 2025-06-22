@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings
+from pathlib import Path
 
 
 class Settings(BaseSettings):
@@ -10,7 +11,7 @@ class Settings(BaseSettings):
     AUTH0_ALGORITHMS: str
 
     class Config:
-        env_file = "../.env"
+        env_file = Path(__file__).parent.parent / ".env"
         env_file_encoding = "utf-8"
 
 

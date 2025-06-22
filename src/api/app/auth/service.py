@@ -29,9 +29,7 @@ class VerifyToken:
 
         # This gets the 'kid' from the passed token
         try:
-            signing_key = self.jwks_client.get_signing_key_from_jwt(
-                token.credentials
-            ).key
+            signing_key = self.jwks_client.get_signing_key_from_jwt(token.credentials).key
         except jwt.exceptions.PyJWKClientError as error:
             raise UnauthorizedException(str(error))
         except jwt.exceptions.DecodeError as error:

@@ -13,8 +13,6 @@ AsyncSessionLocal = async_sessionmaker(
     autoflush=False,
 )
 
-Base = declarative_base()
-
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     """

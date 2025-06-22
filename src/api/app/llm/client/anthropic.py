@@ -12,14 +12,13 @@ class AnthropicLLMClient(AbstractLLMClient):
 
     async def generate_text(self, request: LLMRequest) -> LLMResponse:
         try:
-            messages = []
-            if request.system_prompt:
-                messages.append({"role": "system", "content": request.system_prompt})
-            messages.append({"role": "user", "content": request.prompt})
+            messages = [{"role": "user", "content": request.prompt}]
 
             res = await self._client.messages.create(
                 model=self.model,
-                messages=messages
+                max_tokens=4000,
+                messages=messages,
+                system=request.system_prompt,
             )
 
             return LLMResponse(text=res.content[0].text)
