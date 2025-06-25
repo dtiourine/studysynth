@@ -29,7 +29,7 @@ export default function Dashboard() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome back, John! 👋</h1>
+                    <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome back! 👋</h1>
                     <p className="text-gray-600">Ready to boost your learning? Upload new materials or continue studying.</p>
                 </div>
 
