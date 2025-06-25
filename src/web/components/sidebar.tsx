@@ -6,7 +6,7 @@ import { Home, BookOpen, Brain } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navigation = [
-    { name: "Dashboard", href: "/", icon: Home },
+    { name: "Dashboard", href: "/dashboard", icon: Home },
     { name: "Study Materials", href: "/materials", icon: BookOpen },
     { name: "Study Session", href: "/study", icon: Brain },
 ]
