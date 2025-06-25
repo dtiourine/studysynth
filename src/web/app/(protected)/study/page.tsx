@@ -12,7 +12,7 @@ const sampleFlashcards = [
     {
         id: 1,
         front: "What is mitosis?",
-        back: "The process of cell division that produces two identical diploid cells from a single parent cell. It consists of four main phases: prophase, metaphase, anaphase, and telophase.",
+        back: "The process of cell division that produces two identical diploid cells from a single parent cell. It consists of four dashboard phases: prophase, metaphase, anaphase, and telophase.",
     },
     {
         id: 2,
